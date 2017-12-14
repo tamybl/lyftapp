@@ -15,9 +15,7 @@ $(document).ready(function () {
 	}
 	// Page 1 - 2
 	$('#btn-sign').click(function () {
-		$('#page_1').hide();
-		pagesID++;
-		$('#page_2').show();
+		nextpage();
 		$('#btn-next-signup').prop( "disabled", true );		
 	});
 
@@ -27,9 +25,7 @@ $(document).ready(function () {
 		// Numeros random del 100 al 900
 		code = random();
 		alert('Tu código es: LAB-' + code);
-		$('#page_'+pagesID).hide();
-		pagesID++;
-		$('#page_'+pagesID).show();
+		nextpage();
 		$('#telephone-note').html('<p class="text-center padding-t">Enter de code send to +'+phoneNumber+'</p><button type="button" class="btn btn-default btn-md center-block" id="resend-code">Resend code</button>');
 
 		$('#resend-code').click(function () {
@@ -68,15 +64,21 @@ $(document).ready(function () {
 	// Page 3 - 4
 	$('#btn-next-verify').click(function () {
 		if($('#code-number').val() == code) {
-			$('#page_'+pagesID).hide();
-			pagesID++;
-			$('#page_'+pagesID).show();
+			nextpage();
 		}
 		else {
 			alert('El código ingresado no es válido');
 		}
 	});
 
+	$('#btn-next-send').click( function () {
+		if($('#terms')[0].checked == true && $('#name').val() != '' && $('#lastname').val() != '' && $('#email').val() != '') {
+			nextpage();
+		}
+		else {
+			alert('Debes completar todos los campos');
+		}
+	})
 	
 
 	// Boton volver atras generico
@@ -88,6 +90,12 @@ $(document).ready(function () {
 
 	function random() {
 		return Math.floor((Math.random() * 900) + 100);
+	}
+
+	function nextpage() {
+		$('#page_'+pagesID).hide();
+			pagesID++;
+			$('#page_'+pagesID).show();
 	}
 });
 

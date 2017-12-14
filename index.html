@@ -70,6 +70,7 @@
 	  					<option value="54">AR</option>
 						</select>
 					</div>
+
 			<div class="col-xs-8">
 				<input type="number" id="phone" class="form-control form padding-t" maxlength="10">
 			</div>
@@ -127,23 +128,26 @@
     <div class="row">
        <div class="form-group">
         <label class="col-sm-2">Name</label>
-        <div class="col-sm-10"><input type="text" class="form-control" /></div>
+        <div class="col-sm-10"><input type="text" class="form-control" id="name" /></div>
         </div>
    </div>
     <div class="row">
         <div class="form-group">
         <label class="col-sm-2">Lastname</label>
-        <div class="col-sm-5"><input type="text" class="form-control" /></div>
+        <div class="col-sm-5"><input type="text" class="form-control" id="lastname" /></div>
         </div>
         <div class="form-group">
         <label class="col-sm-2">Email</label>
-        <div class="col-sm-3"><input type="email" class="form-control" /></div>
+        <div class="col-sm-3"><input type="email" class="form-control" id="email" /></div>
         </div>
+        <div class="checkbox">
+  				<label><input type="checkbox" id="terms" value="">I agree to Lyft'ss <a href="#">Terms of Service</a></label>
+				</div>
     </div>
 			</form>
 		</div>
 		<div class="col-xs-12 col-md-offset-1 col-md-10">
-				<button class="btn btn-default btn-lg text-uppercase" id="btn-next-verify">Next</button>
+				<button class="btn btn-default btn-lg text-uppercase" id="btn-next-send">Next</button>
 		</div>
 	</div>	
 	<!-- Page 5 -->
