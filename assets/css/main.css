@@ -1,0 +1,214 @@
+html { height: 100%; }
+
+body {
+	width: 100%;
+  height: 100vh;	
+}
+
+#page_0, #page_5 {
+	width: 100%;
+	height: 100vh;
+	padding-top: 30vh;
+	background: -moz-linear-gradient(#530060,#c90881);
+  background: -webkit-linear-gradient(#530060, #c90881);
+  background: -o-linear-gradient(#530060, #c90881);
+  background: linear-gradient(#530060, #c90881);
+  color: white;
+}
+
+.logo, .logo-header {
+	width: 100%;
+	height: auto;
+}
+
+.logo img, .logo-header img {
+	width: 100%;
+	height: auto;
+}
+
+.logo-header {
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+
+
+#page_1 {
+	width: 100%;
+	height: 100%;
+	padding-top: 5vh;
+	background-color: #000000;
+	background-image: url(../img/street.gif);
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.btn-transparent {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	outline: none;
+}
+
+#btn-next-signup, #btn-next-verify {
+	width: 100%;
+	margin-top: 2em;
+}
+
+.padding-t {
+	margin-top: 2em;
+}
+
+.btn-enabled {
+	background-color: #ea0a8e;
+	color: #fff;
+}
+
+.btn-enabled:hover {
+	background-color: #DA0A85;
+	color: #fff;
+}
+
+
+.btn-back {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ea0a8e;
+  border-radius: 50%;
+  margin-top: 20px;
+  outline: none;
+  color: #ea0a8e;
+}
+
+.border-b {
+	border-bottom: 1px solid #ccc;
+}
+
+.form, .form-code {
+	padding: 2px;
+}
+
+.form-code {
+	display: inline-block;
+	width: 50%;
+	height: auto;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+/* Loader */
+.loader {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1em;
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */ 
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Check */
+
+$circle-length: 151px;
+$check-length: 36px;
+
+.check {
+  align-items: center;
+  background-color: #35297B;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: $circle-length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: $check-length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#successAnimationCircle {
+  stroke-dasharray: $circle-length $circle-length;
+  stroke: #FFF;
+}
+
+#successAnimationCheck {
+  stroke-dasharray: $check-length $check-length;
+  stroke: #FFF;
+}
+
+#successAnimationResult {
+  fill: #FFF;
+  opacity: 0;
+}
+
+#successAnimation.animated {
+  animation: 1s ease-out 0s 1 both scaleAnimation;
+  
+  #successAnimationCircle {
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+               0.3s linear 0.9s 1 both fadeOut;
+  }
+  
+  #successAnimationCheck {
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+               0.3s linear 0.9s 1 both fadeOut;
+  }
+  
+  #successAnimationResult {
+    animation: 0.3s linear 0.9s both fadeIn;
+  }
+}
+

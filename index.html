@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LyftApp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.9.0/css/flag-icon.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+	<!-- Page 0 -->
+	<div class="container-fluid pages" id="page_0">
+		<div class="row" >
+			<div class="col-xs-offset-3 col-xs-6 col-md-offset-4 col-md-4">
+				<div class="logo">
+				<img src="assets/img/logo.png" alt="" class="img-responsive">
+			</div>
+				<div class="loader"></div>
+			</div>
+		</div>
+	</div>
+	<!-- Page 1 -->
+	<div class="container-fluid pages" id="page_1">
+		<div class="row">
+			<div class="col-xs-offset-4 col-xs-4 col-md-offset-5 col-md-2">
+				<div class="logo">
+					<img src="assets/img/logo.png" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-offset-1 col-md-10">
+				<div class="logo-header">
+					<img src="assets/img/lyftlyfe.png" alt="" class="img-responsive">
+				</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<button class="btn btn-default btn-lg btn-transparent pull-right">Login</button>
+						</div>
+						<div class="col-xs-6">
+							<button class="btn btn-default btn-lg btn-transparent" id="btn-sign">Sign Up</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page 2 -->
+	<div class="container-fluid pages" id="page_2">
+		<div class="row">
+			<div class="col-xs-3">
+				<button class="btn-back"><</button>
+			</div>
+			<div class="col-xs-6 col-md-offset-5 col-md-2">
+				<h3 class="text-center">Sign Up</h3>
+				</div>
+			<div class="col-xs-offset-1 col-xs-10 border-b">
+				<p class="text-center">Join Now for free ride credit</p>
+			</div>
+			<div class="col-xs-12 col-md-offset-1 col-md-10">
+				<!-- Phone Number -->
+				<div class="row padding-t">
+					<div class="col-xs-4">
+						<select class="form-control form padding-t" id="countries-code">
+	  					<option value="">+(País)</option>
+	  					<option value="52">MX</option>
+	  					<option value="56">CL</option>
+	  					<option value="51">PE</option>
+	  					<option value="57">COL</option>
+	  					<option value="54">AR</option>
+						</select>
+					</div>
+			<div class="col-xs-8">
+				<input type="number" id="phone" class="form-control form padding-t" maxlength="10">
+			</div>
+				</div>
+			</div>
+		</div>
+		<div class="row padding-t">
+			<div class="col-xs-12 col-md-offset-1 col-md-10">
+				<p class="text-center">We'll send a text to verify your phone.</p>
+				<button class="btn btn-default btn-lg text-uppercase" id="btn-next-signup">Next</button>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Page 3 -->
+	<div class="container-fluid pages" id="page_3">
+		<div class="row">
+			<div class="col-xs-2">
+				<button class="btn-back"><</button>
+			</div>
+			<div class="col-xs-8 col-md-8">
+				<h3 class="text-center">Verify phone number</h3>
+			</div>
+			<div class="col-xs-offset-1 col-xs-10 border-b">
+			<p class="text-center">Join Now for free ride credit</p>
+			</div>
+		</div>
+		<div class="col-xs-offset-3 col-xs-6 col-md-offset-1 col-md-10">
+			<p class="padding-t"><strong>LAB</strong>-<input type="number" id="code-number" class="form-control form-code" maxlength="3"></p>
+
+		</div>
+		<div class="col-xs-12 text-center" id="telephone-note">
+			
+		</div>
+		<div class="col-xs-12 col-md-offset-1 col-md-10">
+				<button class="btn btn-default btn-lg text-uppercase" id="btn-next-verify">Next</button>
+		</div>
+	</div>
+	
+	<!-- Page 4 -->
+	<div class="container-fluid pages" id="page_4">
+		<div class="row">
+			<div class="col-xs-2">
+				<button class="btn-back"><</button>
+			</div>
+			<div class="col-xs-8 col-md-8">
+				<h3 class="text-center">Sign Up</h3>
+			</div>
+			<div class="col-xs-offset-1 col-xs-10 border-b">
+			<p class="text-center">Join Now for free ride credit</p>
+			</div>
+		</div>
+		<div class=" col-xs-12 col-md-offset-1 col-md-10">
+			<form class="form-horizontal">
+    <div class="row">
+       <div class="form-group">
+        <label class="col-sm-2">Name</label>
+        <div class="col-sm-10"><input type="text" class="form-control" /></div>
+        </div>
+   </div>
+    <div class="row">
+        <div class="form-group">
+        <label class="col-sm-2">Lastname</label>
+        <div class="col-sm-5"><input type="text" class="form-control" /></div>
+        </div>
+        <div class="form-group">
+        <label class="col-sm-2">Email</label>
+        <div class="col-sm-3"><input type="email" class="form-control" /></div>
+        </div>
+    </div>
+			</form>
+		</div>
+		<div class="col-xs-12 col-md-offset-1 col-md-10">
+				<button class="btn btn-default btn-lg text-uppercase" id="btn-next-verify">Next</button>
+		</div>
+	</div>	
+	<!-- Page 5 -->
+	<div class="container-fluid pages" id="page_5">
+		<div class="row" >
+			<div class="col-xs-offset-3 col-xs-6 col-md-offset-4 col-md-4">
+				<div class="logo">
+				<img src="assets/img/logo.png" alt="" class="img-responsive">
+			</div>
+				<div class="check text-center">
+					<svg id="successAnimation" class="animated" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+				  <path id="successAnimationResult" fill="#D8D8D8" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
+				  <circle id="successAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2" stroke-linecap="round" fill="transparent"/>
+				  <polyline id="successAnimationCheck" stroke="#979797" stroke-width="2" points="23 34 34 43 47 27" fill="transparent"/>
+				</svg>
+				</div>
+				<h4 class="text-center text-uppercase">Registro Completado</h4>
+			</div>
+		</div>
+	</div>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/app.js"></script>
+</body>
+</html>
