@@ -2,6 +2,11 @@ $(document).ready(function () {
 	var pagesID = 0;
 	var phoneNumber = '';
 	var code = '';
+	$('.selectpicker').selectpicker({
+  style: 'btn-default',
+  size: 4
+	});
+
 	// Paginas en Hide()
 	$('.pages').hide();
 	$('#page_0').show();
@@ -87,9 +92,9 @@ $(document).ready(function () {
 		pagesID--;
 		$('#page_'+pagesID).show();
 	})
-
+	// Numeros aleatorios entre 100 y 999
 	function random() {
-		return Math.floor((Math.random() * 900) + 100);
+		return Math.floor((Math.random() * 899) + 100);
 	}
 
 	function nextpage() {
